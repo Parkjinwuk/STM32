@@ -1,0 +1,23 @@
+#include "button.h" // "" 현재 나의 directory에서 include
+#include "main.h"
+
+#define FND_DATA_PORT GPIOB   // data port
+#define FND_COM_PORT  GPIOC   // data port
+
+#define FND_a  FND0_Pin
+#define FND_b  FND1_Pin
+#define FND_c  FND2_Pin
+#define FND_d  FND3_Pin
+#define FND_e  FND4_Pin
+#define FND_f  FND5_Pin
+#define FND_g  FND6_Pin
+#define FND_p  FND7_Pin
+/*
+#define FND_d1000 GPIO_PIN_8
+#define FND_d100  GPIO_PIN_9
+#define FND_d10   GPIO_PIN_10
+#define FND_d1    GPIO_PIN_11
+*/
+void fnd4digit_main(void);
+void FND4digit_off(void);
+void FND4digit_on(void);

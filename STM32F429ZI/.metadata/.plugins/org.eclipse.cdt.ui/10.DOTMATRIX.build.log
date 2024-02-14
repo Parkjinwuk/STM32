@@ -1,0 +1,10 @@
+16:37:34 **** Incremental Build of configuration Debug for project 10.DOTMATRIX ****
+make -j16 all 
+arm-none-eabi-size   10.DOTMATRIX.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12900	    124	   3492	  16516	   4084	10.DOTMATRIX.elf
+Finished building: default.size.stdout
+ 
+
+16:37:34 Build Finished. 0 errors, 0 warnings. (took 156ms)
+

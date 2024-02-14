@@ -1,0 +1,10 @@
+20:01:58 **** Incremental Build of configuration Debug for project 09.PWM_BUZZER ****
+make -j16 all 
+arm-none-eabi-size   09.PWM_BUZZER.elf 
+   text	   data	    bss	    dec	    hex	filename
+  43148	    428	   4340	  47916	   bb2c	09.PWM_BUZZER.elf
+Finished building: default.size.stdout
+ 
+
+20:01:58 Build Finished. 0 errors, 0 warnings. (took 153ms)
+

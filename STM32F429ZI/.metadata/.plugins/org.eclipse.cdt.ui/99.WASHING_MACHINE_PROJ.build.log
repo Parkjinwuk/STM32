@@ -1,0 +1,21 @@
+11:22:20 **** Incremental Build of configuration Debug for project 99.WASHING_MACHINE_PROJ ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/dotmatrix.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dotmatrix.d" -MT"Core/Src/dotmatrix.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dotmatrix.o"
+../Core/Src/dotmatrix.c: In function 'init_dotmatrix':
+../Core/Src/dotmatrix.c:271:19: warning: assignment to 'unsigned char' from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+  271 |   display_data[i] = number_data[i];
+      |                   ^
+arm-none-eabi-gcc -o "99.WASHING_MACHINE_PROJ.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ParkJinWuk\source\STM32F429ZI\99.WASHING_MACHINE_PROJ\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="99.WASHING_MACHINE_PROJ.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 99.WASHING_MACHINE_PROJ.elf
+ 
+arm-none-eabi-size   99.WASHING_MACHINE_PROJ.elf 
+arm-none-eabi-objdump -h -S  99.WASHING_MACHINE_PROJ.elf  > "99.WASHING_MACHINE_PROJ.list"
+   text	   data	    bss	    dec	    hex	filename
+  32668	    420	   4668	  37756	   937c	99.WASHING_MACHINE_PROJ.elf
+Finished building: default.size.stdout
+ 
+Finished building: 99.WASHING_MACHINE_PROJ.list
+ 
+
+11:22:21 Build Finished. 0 errors, 1 warnings. (took 780ms)
+

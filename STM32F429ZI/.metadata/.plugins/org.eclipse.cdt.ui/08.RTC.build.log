@@ -1,0 +1,105 @@
+17:46:06 **** Incremental Build of configuration Debug for project 08.RTC ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/internal_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/internal_rtc.d" -MT"Core/Src/internal_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/internal_rtc.o"
+../Core/Src/internal_rtc.c: In function 'get_rtc':
+../Core/Src/internal_rtc.c:52:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   52 |   printf("%04d-%02d-%02d %02d:%02d:%02d\n",
+      |   ^~~~~~
+../Core/Src/internal_rtc.c:52:3: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/internal_rtc.c:4:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    3 | #include "button.h"
+  +++ |+#include <stdio.h>
+    4 | 
+../Core/Src/internal_rtc.c:58:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   58 |    sprintf(lcd_buff, "DATE:%04d-%02d-%02d",
+      |    ^~~~~~~
+../Core/Src/internal_rtc.c:58:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/internal_rtc.c:58:4: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/internal_rtc.c:61:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   61 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:65:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   65 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c: In function 'set_rtc':
+../Core/Src/internal_rtc.c:77:2: warning: implicit declaration of function 'strncpy' [-Wimplicit-function-declaration]
+   77 |  strncpy(yy, date_time+6, 2);
+      |  ^~~~~~~
+../Core/Src/internal_rtc.c:77:2: warning: incompatible implicit declaration of built-in function 'strncpy'
+../Core/Src/internal_rtc.c:4:1: note: include '<string.h>' or provide a declaration of 'strncpy'
+    3 | #include "button.h"
+  +++ |+#include <string.h>
+    4 | 
+../Core/Src/internal_rtc.c:86:23: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
+   86 |  sDate.Year = dec2bin(atoi(yy));
+      |                       ^~~~
+../Core/Src/internal_rtc.c: In function 'set_time_button_ui':
+../Core/Src/internal_rtc.c:114:3: warning: incompatible implicit declaration of built-in function 'sprintf'
+  114 |   sprintf(lcd_buff," SET:%02d:%02d:%02d",sel_hour,sel_min,sel_sec);
+      |   ^~~~~~~
+../Core/Src/internal_rtc.c:114:3: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/internal_rtc.c:116:14: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  116 |   lcd_string(lcd_buff);
+      |              ^~~~~~~~
+      |              |
+      |              char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:125:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  125 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:134:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  134 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:143:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  143 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/internal_rtc.c:2:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/internal_rtc.c:152:26: warning: statement with no effect [-Wunused-value]
+  152 |    lcd_display_mode_flag == 0;
+      |    ~~~~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "08.RTC.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ParkJinWuk\source\STM32F429ZI\08.RTC\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="08.RTC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 08.RTC.elf
+ 
+arm-none-eabi-size   08.RTC.elf 
+arm-none-eabi-objdump -h -S  08.RTC.elf  > "08.RTC.list"
+   text	   data	    bss	    dec	    hex	filename
+  42520	    132	   4268	  46920	   b748	08.RTC.elf
+Finished building: default.size.stdout
+ 
+Finished building: 08.RTC.list
+ 
+
+17:46:07 Build Finished. 0 errors, 15 warnings. (took 591ms)
+

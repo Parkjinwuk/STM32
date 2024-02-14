@@ -1,0 +1,37 @@
+#include "main.h"
+#include "fnd.h"
+#include "button.h"
+
+extern volatile int fnd1ms_counter;  // fnd1ms
+
+void fnd4digit_main(void);
+void fnd4digit_sec_clock(void);
+
+uint32_t FND_font[10] =
+{
+  FND_a|FND_b|FND_c|FND_d|FND_e|FND_f,   // 0
+  FND_b|FND_c,                           // 1
+  FND_a|FND_b|FND_d|FND_e|FND_g,         // 2
+  FND_a|FND_b|FND_c|FND_d|FND_g,         // 3
+  FND_b|FND_c|FND_f|FND_g,   // 4
+  FND_a|FND_c|FND_d|FND_f|FND_g,  // 5
+  FND_a|FND_c|FND_d|FND_e|FND_f|FND_g,  // 6
+  FND_a|FND_b|FND_c,      // 7
+  FND_a|FND_b|FND_c|FND_d|FND_e|FND_f|FND_g,   // 8
+  FND_a|FND_b|FND_c|FND_d|FND_f|FND_g   // 9
+};
+
+void fnd4digit_main(void)
+{
+	int fnd_floor = 2;
+
+//	FND4digit_off();
+#if 1 // common 애노우드  WCN4-
+	HAL_GPIO_WritePin(FND_DATA_PORT, FND_font[8]|FND_p, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(FND_DATA_PORT, FND_font[2], GPIO_PIN_RESET);
+
+#else // common 캐소우드 CL5642AH30
+			HAL_GPIO_WritePin(FND_DATA_PORT,FND_font[2], GPIO_PIN_RESET);
+			HAL_GPIO_WritePin(FND_DATA_PORT, FND_font[8]|FND_p, GPIO_PIN_SET);
+#endif
+}

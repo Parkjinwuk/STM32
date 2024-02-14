@@ -1,0 +1,144 @@
+11:18:12 **** Incremental Build of configuration Debug for project 99.WASING_MACHINE_PROJ ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/mechanic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/mechanic.d" -MT"Core/Src/mechanic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/mechanic.o"
+../Core/Src/mechanic.c: In function 'lcd_dsp':
+../Core/Src/mechanic.c:45:18: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   45 |       lcd_string("WASHING_MACHINE"); //
+      |                  ^~~~~~~~~~~~~~~~~
+      |                  |
+      |                  char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c: In function 'set_time_in_bu':
+../Core/Src/mechanic.c:61:18: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   61 |       lcd_string("TIME_SELECT"); //
+      |                  ^~~~~~~~~~~~~
+      |                  |
+      |                  char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:75:21: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   75 |          lcd_string(lcd_buffer);
+      |                     ^~~~~~~~~~
+      |                     |
+      |                     char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:86:21: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   86 |          lcd_string(lcd_buffer);
+      |                     ^~~~~~~~~~
+      |                     |
+      |                     char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:96:21: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   96 |          lcd_string(lcd_buffer);
+      |                     ^~~~~~~~~~
+      |                     |
+      |                     char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:103:17: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  103 |      lcd_string("   AUTO_MODE"); //
+      |                 ^~~~~~~~~~~~~~
+      |                 |
+      |                 char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:109:17: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  109 |      lcd_string(lcd_buffer);
+      |                 ^~~~~~~~~~
+      |                 |
+      |                 char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c: In function 'set_power':
+../Core/Src/mechanic.c:122:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  122 |    lcd_string("  POWER_SELECT");
+      |               ^~~~~~~~~~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:125:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  125 |    lcd_string(lcd_buffer);
+      |               ^~~~~~~~~~
+      |               |
+      |               char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c: In function 'wh_processing':
+../Core/Src/mechanic.c:161:10: warning: statement with no effect [-Wunused-value]
+  161 |          for (sec; sec>=1; sec--)
+      |          ^~~
+../Core/Src/mechanic.c:164:24: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  164 |             lcd_string("TIME_SELECT");
+      |                        ^~~~~~~~~~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:167:24: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  167 |             lcd_string(lcd_buffer);
+      |                        ^~~~~~~~~~
+      |                        |
+      |                        char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:187:13: warning: statement with no effect [-Wunused-value]
+  187 |             for (secc; secc>=1; secc--)
+      |             ^~~
+../Core/Src/mechanic.c:191:27: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  191 |                lcd_string("   AUTO"); //
+      |                           ^~~~~~~~~
+      |                           |
+      |                           char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+../Core/Src/mechanic.c:206:27: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  206 |                lcd_string(lcd_buffer);
+      |                           ^~~~~~~~~~
+      |                           |
+      |                           char *
+In file included from ../Core/Src/mechanic.c:6:
+../Core/Inc/i2c_lcd.h:23:26: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   23 | void lcd_string(uint8_t *str);
+      |                 ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "99.WASING_MACHINE_PROJ.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ParkJinWuk\source\STM32F429ZI\99.WASING_MACHINE_PROJ\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="99.WASING_MACHINE_PROJ.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 99.WASING_MACHINE_PROJ.elf
+ 
+arm-none-eabi-size   99.WASING_MACHINE_PROJ.elf 
+arm-none-eabi-objdump -h -S  99.WASING_MACHINE_PROJ.elf  > "99.WASING_MACHINE_PROJ.list"
+   text	   data	    bss	    dec	    hex	filename
+  36344	    128	   4224	  40696	   9ef8	99.WASING_MACHINE_PROJ.elf
+Finished building: default.size.stdout
+ 
+Finished building: 99.WASING_MACHINE_PROJ.list
+ 
+
+11:18:12 Build Finished. 0 errors, 15 warnings. (took 662ms)
+

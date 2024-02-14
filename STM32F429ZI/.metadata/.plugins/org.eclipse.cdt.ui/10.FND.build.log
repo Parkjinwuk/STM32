@@ -1,0 +1,10 @@
+10:24:54 **** Incremental Build of configuration Debug for project 10.FND ****
+make -j16 all 
+arm-none-eabi-size   10.FND.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44560	    180	   4372	  49112	   bfd8	10.FND.elf
+Finished building: default.size.stdout
+ 
+
+10:24:54 Build Finished. 0 errors, 0 warnings. (took 219ms)
+

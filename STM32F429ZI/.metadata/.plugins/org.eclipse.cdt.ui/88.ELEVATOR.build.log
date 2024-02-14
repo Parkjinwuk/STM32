@@ -1,0 +1,17 @@
+20:43:37 **** Incremental Build of configuration Debug for project 88.ELEVATOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/dotmatrix.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dotmatrix.d" -MT"Core/Src/dotmatrix.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dotmatrix.o"
+arm-none-eabi-gcc -o "88.ELEVATOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ParkJinWuk\source\STM32F429ZI\88.ELEVATOR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="88.ELEVATOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 88.ELEVATOR.elf
+ 
+arm-none-eabi-size   88.ELEVATOR.elf 
+arm-none-eabi-objdump -h -S  88.ELEVATOR.elf  > "88.ELEVATOR.list"
+   text	   data	    bss	    dec	    hex	filename
+  50324	    292	  23404	  74020	  12124	88.ELEVATOR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 88.ELEVATOR.list
+ 
+
+20:43:38 Build Finished. 0 errors, 0 warnings. (took 718ms)
+

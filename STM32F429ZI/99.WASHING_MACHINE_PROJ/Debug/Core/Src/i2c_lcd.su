@@ -1,0 +1,6 @@
+../Core/Src/i2c_lcd.c:21:6:i2c_lcd_main	24	static
+../Core/Src/i2c_lcd.c:52:6:lcd_command	32	static
+../Core/Src/i2c_lcd.c:71:6:lcd_data	32	static
+../Core/Src/i2c_lcd.c:89:6:i2c_lcd_init	8	static
+../Core/Src/i2c_lcd.c:102:6:lcd_string	16	static
+../Core/Src/i2c_lcd.c:111:6:move_cursor	16	static

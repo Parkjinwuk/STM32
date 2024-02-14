@@ -1,0 +1,44 @@
+14:25:15 **** Incremental Build of configuration Debug for project 13.RTOS_DOTMATRIX_STEPMOTOR ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/dotmatrix.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dotmatrix.d" -MT"Core/Src/dotmatrix.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dotmatrix.o"
+../Core/Src/dotmatrix.c: In function 'init_dotmatrix':
+../Core/Src/dotmatrix.c:277:19: warning: assignment to 'unsigned char' from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+  277 |   display_data[i] = number_data[i];
+      |                   ^
+../Core/Src/dotmatrix.c: In function 'dotmatrix_main_test':
+../Core/Src/dotmatrix.c:336:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  336 |    sprintf(lcd_buff,"now: %d", now);
+      |    ^~~~~~~
+../Core/Src/dotmatrix.c:336:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/dotmatrix.c:3:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    2 | #include "cmsis_os.h"
+  +++ |+#include <stdio.h>
+    3 | 
+../Core/Src/dotmatrix.c:336:28: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  336 |    sprintf(lcd_buff,"now: %d", now);
+      |                           ~^   ~~~
+      |                            |   |
+      |                            int uint32_t {aka long unsigned int}
+      |                           %ld
+../Core/Src/dotmatrix.c:342:16: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+  342 |     lcd_string(lcd_buff);
+      |                ^~~~~~~~
+      |                |
+      |                char *
+../Core/Src/dotmatrix.c:4:33: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+    4 | extern void lcd_string(uint8_t *str);
+      |                        ~~~~~~~~~^~~
+arm-none-eabi-gcc -o "13.RTOS_DOTMATRIX_STEPMOTOR.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ParkJinWuk\source\STM32F429ZI\13.RTOS_DOTMATRIX_STEPMOTOR\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="13.RTOS_DOTMATRIX_STEPMOTOR.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 13.RTOS_DOTMATRIX_STEPMOTOR.elf
+ 
+arm-none-eabi-size   13.RTOS_DOTMATRIX_STEPMOTOR.elf 
+arm-none-eabi-objdump -h -S  13.RTOS_DOTMATRIX_STEPMOTOR.elf  > "13.RTOS_DOTMATRIX_STEPMOTOR.list"
+   text	   data	    bss	    dec	    hex	filename
+  57488	    444	  23852	  81784	  13f78	13.RTOS_DOTMATRIX_STEPMOTOR.elf
+Finished building: default.size.stdout
+ 
+Finished building: 13.RTOS_DOTMATRIX_STEPMOTOR.list
+ 
+
+14:25:16 Build Finished. 0 errors, 5 warnings. (took 1s.28ms)
+

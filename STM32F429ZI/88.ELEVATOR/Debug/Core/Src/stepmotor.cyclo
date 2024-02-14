@@ -1,0 +1,4 @@
+stepmotor.c:27:6:set_rpm	1
+stepmotor.c:38:6:HAL_GPIO_EXTI_Callback	7
+stepmotor.c:67:6:stepmotor_main_test	9
+stepmotor.c:144:6:stepmotor_drive	12

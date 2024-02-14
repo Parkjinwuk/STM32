@@ -1,0 +1,5 @@
+../Core/Src/fnd4dight.c:31:6:fnd4digit_main	16	static
+../Core/Src/fnd4dight.c:83:6:FND_update	16	static
+../Core/Src/fnd4dight.c:92:6:FND4digit_off	8	static
+../Core/Src/fnd4dight.c:103:6:FND4digit_on	8	static
+../Core/Src/fnd4dight.c:115:6:fnd4digit_sec_clock	8	static

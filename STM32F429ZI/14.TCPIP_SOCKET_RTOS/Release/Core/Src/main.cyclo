@@ -1,0 +1,15 @@
+main.c:1088:6:StartDefaultTask	1
+main.c:1112:6:Task1_func	1
+main.c:1131:6:Task2_func	1
+main.c:1150:6:Task3_func	1
+main.c:155:6:HAL_SYSTICK_Handler	1
+main.c:172:1:__io_putchar	1
+main.c:182:6:delay_us	2
+main.c:214:6:HAL_ADC_ConvCpltCallback	2
+main.c:223:6:nucleo_stm32f429zi_led_off	1
+main.c:191:6:HAL_GPIO_EXTI_Callback	4
+main.c:229:6:nucleo_stm32f429zi_led_on	1
+main.c:386:6:SystemClock_Config	3
+main.c:241:5:main	29
+main.c:1171:6:HAL_TIM_PeriodElapsedCallback	3
+main.c:1192:6:Error_Handler	1

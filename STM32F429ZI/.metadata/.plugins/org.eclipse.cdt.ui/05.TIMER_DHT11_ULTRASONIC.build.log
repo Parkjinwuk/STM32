@@ -1,0 +1,53 @@
+10:12:16 **** Incremental Build of configuration Debug for project 05.TIMER_DHT11_ULTRASONIC ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/ultrasonic.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ultrasonic.d" -MT"Core/Src/ultrasonic.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ultrasonic.o"
+../Core/Src/ultrasonic.c: In function 'ultrasonic_processing':
+../Core/Src/ultrasonic.c:41:3: warning: implicit declaration of function 'make_trigger' [-Wimplicit-function-declaration]
+   41 |   make_trigger();
+      |   ^~~~~~~~~~~~
+../Core/Src/ultrasonic.c:48:4: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   48 |    printf("dis: %dcm\n", dis);
+      |    ^~~~~~
+../Core/Src/ultrasonic.c:48:4: warning: incompatible implicit declaration of built-in function 'printf'
+../Core/Src/ultrasonic.c:2:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+    1 | #include "ultrasonic.h"
+  +++ |+#include <stdio.h>
+    2 | 
+../Core/Src/ultrasonic.c:49:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   49 |    sprintf(lcd_buff,"dis: %dcm", dis);
+      |    ^~~~~~~
+../Core/Src/ultrasonic.c:49:4: warning: incompatible implicit declaration of built-in function 'sprintf'
+../Core/Src/ultrasonic.c:49:4: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/ultrasonic.c:51:15: warning: pointer targets in passing argument 1 of 'lcd_string' differ in signedness [-Wpointer-sign]
+   51 |    lcd_string(lcd_buff);
+      |               ^~~~~~~~
+      |               |
+      |               char *
+../Core/Src/ultrasonic.c:4:33: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+    4 | extern void lcd_string(uint8_t *str);
+      |                        ~~~~~~~~~^~~
+../Core/Src/ultrasonic.c: At top level:
+../Core/Src/ultrasonic.c:56:6: warning: conflicting types for 'make_trigger'
+   56 | void make_trigger()
+      |      ^~~~~~~~~~~~
+../Core/Src/ultrasonic.c:41:3: note: previous implicit declaration of 'make_trigger' was here
+   41 |   make_trigger();
+      |   ^~~~~~~~~~~~
+../Core/Src/ultrasonic.c: In function 'make_trigger':
+../Core/Src/ultrasonic.c:59:2: warning: implicit declaration of function 'delay_us' [-Wimplicit-function-declaration]
+   59 |  delay_us(2);
+      |  ^~~~~~~~
+arm-none-eabi-gcc -o "05.TIMER_DHT11_ULTRASONIC.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\ParkJinWuk\source\STM32F429ZI\05.TIMER_DHT11_ULTRASONIC\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="05.TIMER_DHT11_ULTRASONIC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 05.TIMER_DHT11_ULTRASONIC.elf
+ 
+arm-none-eabi-size   05.TIMER_DHT11_ULTRASONIC.elf 
+arm-none-eabi-objdump -h -S  05.TIMER_DHT11_ULTRASONIC.elf  > "05.TIMER_DHT11_ULTRASONIC.list"
+   text	   data	    bss	    dec	    hex	filename
+  32932	    124	   4004	  37060	   90c4	05.TIMER_DHT11_ULTRASONIC.elf
+Finished building: default.size.stdout
+ 
+Finished building: 05.TIMER_DHT11_ULTRASONIC.list
+ 
+
+10:12:16 Build Finished. 0 errors, 8 warnings. (took 589ms)
+
